@@ -20,3 +20,13 @@ insert into Student values(1123,  'Ken',3.0,'Egnineering');
 insert into Student values(1124 , 'Neha',3.6,'Biology');
 insert into Student values(1125 , 'Shawn',3.7,'Biology');
 insert into Student values(1126 , 'Sarah',3.1,'Biology');
+
+insert into College values('McMaster', 'ON', 20000);
+insert into College values('UofT', 'ON', 30000);
+insert into College values('Waterloo', 'ON', 15000);
+insert into College values('McGill', 'QC', 18000);
+insert into College values('UBC', 'BC', 19000);
+
+
+
+
