@@ -16,4 +16,10 @@ from Student, Application
 where Student.ID = Application.Student_ID
 
 
+---Same as above except it removes all duplicates
+select distinct name, major
+from Student, Application
+where Student.ID = Application.Student_ID
+
+
 
