@@ -21,5 +21,15 @@ select distinct name, major
 from Student, Application
 where Student.ID = Application.Student_ID;
 
+--This query selects those who applied to engineering at McMaster and shows their GPA and whether or not they got accepted.
+select distinct name, GPA, decision
+from Student, Application
+where Student.ID = Application.Student_ID
+	and major = 'Engineering' and College_Name = 'McMaster';
+
+
+
+
+
 
 
