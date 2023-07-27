@@ -1,2 +1,22 @@
-Create Table Student(ID int,name varchar(30),GPA float);
-Create Table College(name varchar(30), state char(2), enrollement int);
+Create Table Student(ID int,name varchar(30),GPA float,program varchar(30));
+--Creating a Table of Students
+Create Table College(name varchar(30), state char(2), enrollement int); 
+--Creating a table of Schools
+
+--Populating the tables with some sample values
+insert into Student values(1111 , 'Bob',3.1,'Engineering');
+insert into Student values(1112 , 'Ann',3.3,'Math');
+insert into Student values(1113 , 'George',2.7,'Computer Science');
+insert into Student values(1114 , 'Paul',2.5,'Physics');
+insert into Student values(1115,  'Kareem',3.0,'Engineering');
+insert into Student values(1116 , 'Michael',4.0,'Engineering');
+insert into Student values(1117 , 'Shawn',3.7,'Math');
+insert into Student values(1118 , 'Taylor',2.9,'Computer Science');
+insert into Student values(1119 , 'Alexandra',2.8,'Physics');
+insert into Student values(1120 , 'Annie',3.3,'Computer Science');
+insert into Student values(1121 , 'Chris',2.7,'Physics');
+insert into Student values(1122 , 'Mike',3.9,'Math');
+insert into Student values(1123,  'Ken',3.0,'Egnineering');
+insert into Student values(1124 , 'Neha',3.6,'Biology');
+insert into Student values(1125 , 'Shawn',3.7,'Biology');
+insert into Student values(1126 , 'Sarah',3.1,'Biology');
