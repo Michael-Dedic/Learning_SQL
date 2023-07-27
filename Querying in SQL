@@ -5,10 +5,15 @@ Select ID, name, GPA
 from Student
 where GPA >3.1
 
---The query below selects selects which Colleges have an enrollement of larger than 19000 students.
+--The query below selects  which Colleges have an enrollement of larger than 19000 students.
 --Select name, state, enrollement
 --from College
 --where enrollement > 19000
+
+--The query below selects the students and all of the majors they applied for.
+select name, major
+from Student, Application
+where Student.ID = Application.Student_ID
 
 
 
