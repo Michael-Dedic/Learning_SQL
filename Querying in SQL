@@ -1,11 +1,11 @@
 --Note that I will be using the tables created in file called "Creating Tables In SQL"
 
---The code below selects the student ID, name and GPA of students from the students data that have a GPA>3
+--The query below selects the student ID, name and GPA of students from the students data that have a GPA>3
 Select ID, name, GPA
 from Student
 where GPA >3.1
 
-
+--The query below selects selects which Colleges have an enrollement of larger than 19000 students.
 --Select name, state, enrollement
 --from College
 --where enrollement > 19000
