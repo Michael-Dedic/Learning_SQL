@@ -3,23 +3,23 @@
 --The query below selects the student ID, name and GPA of students from the students data that have a GPA>3
 Select ID, name, GPA
 from Student
-where GPA >3.1
+where GPA >3.1;
 
 --The query below selects  which Colleges have an enrollement of larger than 19000 students.
 --Select name, state, enrollement
 --from College
---where enrollement > 19000
+--where enrollement > 19000;
 
 --The query below selects the students and all of the majors they applied for.
 select name, major
 from Student, Application
-where Student.ID = Application.Student_ID
+where Student.ID = Application.Student_ID;
 
 
 ---Same as above except it removes all duplicates
 select distinct name, major
 from Student, Application
-where Student.ID = Application.Student_ID
+where Student.ID = Application.Student_ID;
 
 
 
