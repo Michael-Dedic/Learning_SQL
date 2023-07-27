@@ -1,0 +1,2 @@
+Create Table Student(ID int,name varchar(30),GPA int);
+Create Table College(name varchar(30), state char(2), enrollement int);
