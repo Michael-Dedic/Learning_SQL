@@ -33,5 +33,27 @@ insert into College values('McGill', 'QC', 18000);
 insert into College values('UBC', 'BC', 19000);
 
 
+insert into Application values(1111, 'McMaster', 'Engineering', 'Y');
+insert into Application values(1111, 'UofT', 'Engineering', 'N');
+insert into Application values(1112, 'McGill', 'Math', 'Y');
+insert into Application values(1113, 'Waterloo', 'Computer Science', 'Y');
+insert into Application values(1111, 'McMaster', 'Biology', 'Y');
+insert into Application values(1118, 'UofT', 'Engineering', 'Y');
+insert into Application values(1119, 'McGill', 'Math', 'N');
+insert into Application values(1121, 'Waterloo', 'Computer Science', 'Y');
+insert into Application values(1124, 'McMaster', 'Biology', 'N');
+insert into Application values(1126, 'UofT', 'Engineering', 'N');
+insert into Application values(1116, 'McGill', 'Math', 'Y');
+insert into Application values(1116, 'Waterloo', 'Computer Science', 'Y');
+insert into Application values(1116, 'McMaster', 'Biology', 'N');
+insert into Application values(1111, 'UofT', 'Engineering', 'N');
+insert into Application values(1112, 'McGill', 'Math', 'Y');
+insert into Application values(1113, 'Waterloo', 'Computer Science', 'Y');
+insert into Application values(1116, 'McMaster', 'Engineering', 'Y');
+
+
+
+
+
 
 
