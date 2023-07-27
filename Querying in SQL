@@ -6,3 +6,9 @@ from Student
 where GPA >3.1
 
 
+--Select name, state, enrollement
+--from College
+--where enrollement > 19000
+
+
+
