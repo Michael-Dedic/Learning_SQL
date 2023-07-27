@@ -6,9 +6,9 @@ from Student
 where GPA >3.1;
 
 --The query below selects  which Colleges have an enrollement of larger than 19000 students.
---Select name, state, enrollement
+--Select name, state, enrollment
 --from College
---where enrollement > 19000;
+--where enrollment > 19000;
 
 --The query below selects the students and all of the majors they applied for.
 select name, major
@@ -26,6 +26,13 @@ select distinct name, GPA, decision
 from Student, Application
 where Student.ID = Application.Student_ID
 	and major = 'Engineering' and College_Name = 'McMaster';
+
+
+
+select distinct College_Name
+from College, Application
+where College.name = Application.College_Name
+	and enrollment > 18000 and major = 'Engineering';
 
 
 
