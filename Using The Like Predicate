@@ -1,1 +1,4 @@
-
+--This query finds the student IDs for those who applied for just biology.
+select Student_ID,major
+from Application
+where major like '%Biology%';
