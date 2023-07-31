@@ -5,3 +5,10 @@ from Student S,College C ,Application A
 where A.Student_ID = S.ID and A.College_Name = C.name order by GPA desc, enrollment;
 
 
+--This query selects which students have the same GPA by making 2 instances of the student data and performing a cross product on them.
+select distinct S1.ID, S1.name, S1.GPA, S2.ID, S2.name, S2.GPA
+from Student S1,Student S2
+where S1.GPA = S2.GPA and S1.ID <> S2.ID
+--The S1.ID <> S2.ID makes it so that the each person does not get matched with themselves since there are 2 Student instances
+
+
