@@ -11,4 +11,10 @@ from Student S1,Student S2
 where S1.GPA = S2.GPA and S1.ID < S2.ID
 --The S1.ID < S2.ID makes it so that the each person does not get matched with themselves since there are 2 Student instances and each unique pair is only shown once in the result.
 
+--This query selects names from both student and college tables
+select name as Name from Student
 
+union all
+
+select name as Name from College
+order by Name;
