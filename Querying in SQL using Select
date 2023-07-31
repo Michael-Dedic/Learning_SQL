@@ -39,6 +39,14 @@ select distinct ID, Student.name, College_Name, GPA,major, enrollment
 from Student,College,Application
 where Application.Student_ID = Student.ID and Application.College_Name = College.name order by GPA desc, enrollment;
 
+--This query gives you a cross product between the Student and College tables giving you all of the associated information between the two.
+select *
+from Student,College
+
+
+
+
+
 
 
 
