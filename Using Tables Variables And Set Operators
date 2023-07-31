@@ -18,3 +18,13 @@ union all
 
 select name as Name from College
 order by Name;
+
+--This shows the student IDs of those who applied to engineering and math
+
+select Student_ID from Application where major = 'Engineering'
+
+intersect
+
+select Student_ID from Application where major = 'Math'
+
+
