@@ -36,5 +36,13 @@ from Application A1, Application A2
 where A1.Student_ID = A2.Student_ID and A1.major = 'Engineering' and A2.major = 'Math';
 
 
+--This query shows the student Ids of those who applied to Engineering but not Math
+select Student_ID from Application where major = 'Engineering'
+
+except
+
+select Student_ID from Application where major = 'Math'
+
+
 
 
