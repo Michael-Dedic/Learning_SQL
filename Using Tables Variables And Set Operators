@@ -28,3 +28,14 @@ intersect
 select Student_ID from Application where major = 'Math'
 
 
+
+--This code does the same things as the previous queryies but instead of using a set operator, I used a table operator
+
+select A1.Student_ID
+from Application A1, Application A2
+where A1.Student_ID = A2.Student_ID and A1.major = 'Engineering' and A2.major = 'Math';
+
+
+
+
+
