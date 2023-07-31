@@ -1,1 +1,7 @@
 
+--This is a query from the querying in SQL using select file but now it is more readable and cleaner
+select distinct ID, S.name, College_Name, GPA,major, enrollment
+from Student S,College C ,Application A
+where A.Student_ID = S.ID and A.College_Name = C.name order by GPA desc, enrollment;
+
+
