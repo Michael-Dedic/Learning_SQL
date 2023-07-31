@@ -3,3 +3,9 @@
 select ID, name
 from Student
 where ID in (select Student_ID from Application where major = 'Engineering');
+
+
+--This is an alternate way to to the query right above without using a subquery
+select distinct Student_ID, name
+from Student, Application
+where Student.ID = Application.Student_ID and major = 'Engineering';
