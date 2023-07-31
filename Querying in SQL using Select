@@ -34,10 +34,10 @@ from College, Application
 where College.name = Application.College_Name
 	and enrollment > 18000 and major = 'Engineering';
 
---This query gets all of the information about the applicant and the school programs they applied for.
+--This query gets all of the information about the applicant and the school programs they applied for and orders by descending GPA
 select distinct ID, Student.name, College_Name, GPA,major, enrollment
 from Student,College,Application
-where Application.Student_ID = Student.ID and Application.College_Name = College.name
+where Application.Student_ID = Student.ID and Application.College_Name = College.name order by GPA desc;
 
 
 
