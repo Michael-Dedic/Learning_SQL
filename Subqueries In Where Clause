@@ -23,3 +23,14 @@ where ID in (select Student_ID from Application where major = 'Engineering')
 select distinct ID,name,GPA
 from Student, Application
 where Student.ID = Application.Student_ID and major = 'Engineering';
+
+
+--This query shows the students who applied to Engineering but not Math. The result is the same as using the except operator in a previous example.
+
+select ID, name
+from Student
+where ID in (select Student_ID from Application where major = 'Engineering')
+and ID not in (select Student_ID from Application where major = 'Math')
+
+
+
