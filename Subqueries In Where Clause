@@ -56,6 +56,12 @@ from Student S1
 where not exists (select * from Student S2 where S2.GPA > S1.GPA);
 
 
+--This query does is another way to do the above query
+select name,GPA
+from Student 
+where GPA >= all (select GPA from Student);
+
+
 
 
 
