@@ -9,3 +9,11 @@ where ID in (select Student_ID from Application where major = 'Engineering');
 select distinct Student_ID, name
 from Student, Application
 where Student.ID = Application.Student_ID and major = 'Engineering';
+
+
+
+--This query shows the GPA, name, and ID of the students who applied for engineering
+
+select GPA,ID,name
+from Student
+where ID in (select Student_ID from Application where major = 'Engineering')
