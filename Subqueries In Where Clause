@@ -56,7 +56,7 @@ from Student S1
 where not exists (select * from Student S2 where S2.GPA > S1.GPA);
 
 
---This query does is another way to do the above query
+--This query does is another way to do the above query. Note that all does not work in SQL lite
 select name,GPA
 from Student 
 where GPA >= all (select GPA from Student);
