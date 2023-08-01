@@ -34,3 +34,11 @@ and ID not in (select Student_ID from Application where major = 'Math')
 
 
 
+--This query finds all Colleges such that there is some other College within the same state
+select name,state
+from College C1
+where exists (select * from College C2 where C2.state = C1.state and C1.name <> C2.name);
+
+
+
+
