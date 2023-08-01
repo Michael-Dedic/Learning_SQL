@@ -41,4 +41,16 @@ where exists (select * from College C2 where C2.state = C1.state and C1.name <> 
 
 
 
+--This query finds all colleges where there does not exist another college whose enrollment is higher than the first college
+-- This is essentially a max function
+
+select name,state
+from College C1
+where not exists (select * from College C2 where C2.enrollment > C1.enrollment);
+
+
+
+
+
+
 
