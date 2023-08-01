@@ -62,6 +62,12 @@ from Student
 where GPA >= all (select GPA from Student);
 
 
+--This query however will work in SQLlite
+select name, GPA
+from Student
+where GPA >= (select max(GPA) from Student)
+
+
 
 
 
