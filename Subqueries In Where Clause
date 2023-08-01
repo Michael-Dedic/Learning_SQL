@@ -17,3 +17,9 @@ where Student.ID = Application.Student_ID and major = 'Engineering';
 select GPA,ID,name
 from Student
 where ID in (select Student_ID from Application where major = 'Engineering')
+
+
+--Alternate way to write the query above without a subquery
+select distinct ID,name,GPA
+from Student, Application
+where Student.ID = Application.Student_ID and major = 'Engineering';
