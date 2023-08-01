@@ -50,6 +50,13 @@ where not exists (select * from College C2 where C2.enrollment > C1.enrollment);
 
 
 
+--This query finds the student with the highest GPA
+select name, GPA
+from Student S1
+where not exists (select * from Student S2 where S2.GPA > S1.GPA);
+
+
+
 
 
 
