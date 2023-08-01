@@ -68,7 +68,10 @@ from Student
 where GPA >= (select max(GPA) from Student)
 
 
-
+--This query gives you all colleges where it is not the case that the enrollment is less than or equal to any other college
+select name
+from College C1
+where not enrollment<= any(select enrollment from College C2 where C2.name<>C1.name);
 
 
 
