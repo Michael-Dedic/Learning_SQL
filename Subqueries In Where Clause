@@ -73,6 +73,9 @@ select name
 from College C1
 where not enrollment<= any(select enrollment from College C2 where C2.name<>C1.name);
 
-
+--This query all of the students who do not have the lowest GPA. We look for students where there is some student with a lower GPA.
+select ID,name,GPA
+from Student S1
+where exists( select * from Student S2 where S1.GPA > S2.GPA);
 
 
