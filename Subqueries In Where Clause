@@ -86,7 +86,7 @@ where exists( select * from Student S2 where S1.GPA > S2.GPA);
 select ID,name
 from Student 
 where  ID = any(select ID from Application where major = 'Engineering')
-and ID <> any(select ID from Application where major = 'Math');
+and not ID = any(select ID from Application where major = 'Math');
 
 
 
