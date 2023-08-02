@@ -79,3 +79,15 @@ from Student S1
 where exists( select * from Student S2 where S1.GPA > S2.GPA);
 
 
+
+
+
+--This query shows another way to get all students who applied to Engineering but not Math 
+select ID,name
+from Student 
+where  ID = any(select ID from Application where major = 'Engineering')
+and ID <> any(select ID from Application where major = 'Math');
+
+
+
+
