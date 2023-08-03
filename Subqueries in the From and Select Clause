@@ -11,3 +11,13 @@ select *
 from (select ID, name, GPA, GPA*(sizeHS/8000) as scaledGPA
 from Student) G
 where abs(G.scaledGPA-GPA) >1;
+
+
+--This query pairs colleges with the highest GPA of applicants
+select  College_Name,state,GPA
+from Student,College,Application
+where Student.ID = Application.Student_ID
+and College.name = Application.College_Name
+and GPA >= all(select GPA from Student,Application
+where Student.ID = Application.Student_ID
+and Application.College_Name = College.name); 
