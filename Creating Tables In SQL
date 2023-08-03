@@ -1,5 +1,5 @@
 --Creating a Table of Students
-Create Table Student(ID int,name varchar(30),GPA float,program varchar(30),SizeHS int);
+Create Table Student(ID int,name varchar(30),GPA float,program varchar(30),SizeHS float);
 --Creating a table of Schools
 Create Table College(name varchar(30), state char(2), enrollment int); 
 
