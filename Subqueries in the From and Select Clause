@@ -28,7 +28,7 @@ and Application.College_Name = College.name);
 
 select College_Name,state
 (select GPA
-from Student,College,Application
+from Student,Application
 where Student.ID = Application.Student_ID
 and College.name = Application.College_Name
 and GPA >= all(select GPA from Student,Application
