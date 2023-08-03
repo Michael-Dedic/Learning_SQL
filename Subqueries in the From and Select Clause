@@ -1,6 +1,6 @@
 
 --This query finds students who scaled GPA changes by more than 1
-select ID, name, GPA, GPA*(sizeHS/5000) as scaledGPA
+select ID, name, GPA, GPA*(sizeHS/8000) as scaledGPA
 from Student
-where GPA*(sizeHS/5000)-GPA >1
-or GPA - GPA*(sizeHS/5000)-GPA>1;
+where GPA*(sizeHS/8000)-GPA >1
+or GPA - GPA*(sizeHS/8000)-GPA>1;
