@@ -21,3 +21,20 @@ and College.name = Application.College_Name
 and GPA >= all(select GPA from Student,Application
 where Student.ID = Application.Student_ID
 and Application.College_Name = College.name); 
+
+
+
+--Another way to write the above query
+
+select College_Name,state
+(select GPA
+from Student,College,Application
+where Student.ID = Application.Student_ID
+and College.name = Application.College_Name
+and GPA >= all(select GPA from Student,Application
+where Student.ID = Application.Student_ID
+and Application.College_Name = College.name)) as GPA
+
+from College;
+
+
