@@ -1,5 +1,5 @@
 --Creating a Table of Students
-Create Table Student(ID int,name varchar(30),GPA float,program varchar(30));
+Create Table Student(ID int,name varchar(30),GPA float,program varchar(30),SizeHS int);
 --Creating a table of Schools
 Create Table College(name varchar(30), state char(2), enrollment int); 
 
@@ -9,22 +9,22 @@ Create Table Application(Student_ID int, College_Name varchar(3), major varchar(
 
 
 --Populating the tables with some sample values
-insert into Student values(1111 , 'Bob',3.1,'Engineering');
-insert into Student values(1112 , 'Ann',3.3,'Math');
-insert into Student values(1113 , 'George',2.7,'Computer Science');
-insert into Student values(1114 , 'Paul',2.5,'Physics');
-insert into Student values(1115,  'Kareem',3.0,'Engineering');
-insert into Student values(1116 , 'Michael',4.0,'Engineering');
-insert into Student values(1117 , 'Shawn',3.7,'Math');
-insert into Student values(1118 , 'Taylor',2.9,'Computer Science');
-insert into Student values(1119 , 'Alexandra',2.8,'Physics');
-insert into Student values(1120 , 'Annie',3.3,'Computer Science');
-insert into Student values(1121 , 'Chris',2.7,'Physics');
-insert into Student values(1122 , 'Mike',3.9,'Math');
-insert into Student values(1123,  'Ken',3.0,'Egnineering');
-insert into Student values(1124 , 'Neha',3.6,'Biology');
-insert into Student values(1125 , 'Shawn',3.7,'Biology');
-insert into Student values(1126 , 'Sarah',3.1,'Biology');
+insert into Student values(1111 , 'Bob',3.1,'Engineering',8000);
+insert into Student values(1112 , 'Ann',3.3,'Math',7000);
+insert into Student values(1113 , 'George',2.7,'Computer Science',9000);
+insert into Student values(1114 , 'Paul',2.5,'Physics',8300);
+insert into Student values(1115,  'Kareem',3.0,'Engineering',9000);
+insert into Student values(1116 , 'Michael',4.0,'Engineering',11000);
+insert into Student values(1117 , 'Shawn',3.7,'Math',7000);
+insert into Student values(1118 , 'Taylor',2.9,'Computer Science',6000);
+insert into Student values(1119 , 'Alexandra',2.8,'Physics',12000);
+insert into Student values(1120 , 'Annie',3.3,'Computer Science',9100);
+insert into Student values(1121 , 'Chris',2.7,'Physics',6200);
+insert into Student values(1122 , 'Mike',3.9,'Math',8500);
+insert into Student values(1123,  'Ken',3.0,'Egnineering',5000);
+insert into Student values(1124 , 'Neha',3.6,'Biology',4000);
+insert into Student values(1125 , 'Shawn',3.7,'Biology',9500);
+insert into Student values(1126 , 'Sarah',3.1,'Biology',4000);
 
 insert into College values('McMaster', 'ON', 20000);
 insert into College values('UofT', 'ON', 30000);
@@ -50,10 +50,3 @@ insert into Application values(1111, 'UofT', 'Engineering', 'N');
 insert into Application values(1112, 'McGill', 'Math', 'Y');
 insert into Application values(1113, 'Waterloo', 'Computer Science', 'Y');
 insert into Application values(1116, 'McMaster', 'Engineering', 'Y');
-
-
-
-
-
-
-
