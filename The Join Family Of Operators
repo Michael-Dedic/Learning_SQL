@@ -36,7 +36,9 @@ on Application.Student_ID = Student.ID and Application.College_Name = College.na
 select distinct ID, Student.name, College_Name, GPA,major, enrollment
 from (Student join  Application on Application.Student_ID = Student.ID) join College on Application.College_Name = College.name order by GPA desc, enrollment;
 
-
+--This code writes a previous query using the natural join
+Select distinct name, major
+from Student natural join Application;
 
 
 
