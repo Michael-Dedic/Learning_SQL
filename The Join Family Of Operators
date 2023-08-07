@@ -48,4 +48,11 @@ where SizeHS < 10000 and major = 'Computer Science';
 
 
 
+--Does a previous query using a natural join but with the using feature to perform the natural join. This is better software engineering practice.
+Select distinct name,GPA
+from Student join Application using (ID)
+where SizeHS < 10000 and major = 'Computer Science';
+
+
+
 
