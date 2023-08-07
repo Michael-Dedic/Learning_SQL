@@ -55,4 +55,15 @@ where SizeHS < 10000 and major = 'Computer Science';
 
 
 
+--This query is one I've done before except now I am using a join to find the students whose GPA are the same
+select distinct S1.ID, S1.name, S1.GPA, S2.ID, S2.name, S2.GPA
+from Student S1 join Student S2 using(GPA)
+where S1.ID < S2.ID
+
+
+
+
+
+
+
 
