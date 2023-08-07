@@ -10,3 +10,29 @@ where Student.ID = Application.Student_ID;
 Select distinct name, major
 from Student inner join Application
 on Student.ID = Application.Student_ID;
+
+
+--This query is similar to previous examples but now using the inner join
+Select distinct name,GPA
+from Student inner join Application
+on Student.ID = Application.Student_ID
+where SizeHS < 10000 and major = 'Computer Science';
+
+
+--You can write the above query with an and statement instead of the where clause
+Select distinct name,GPA
+from Student inner join Application
+on Student.ID = Application.Student_ID
+and SizeHS < 10000 and major = 'Computer Science';
+
+
+
+
+
+
+
+
+
+
+
+
