@@ -41,5 +41,11 @@ Select distinct name, major
 from Student natural join Application;
 
 
+--Does a previous query using a natural join
+Select distinct name,GPA
+from Student natural join Application
+where SizeHS < 10000 and major = 'Computer Science';
+
+
 
 
