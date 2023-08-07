@@ -26,7 +26,10 @@ on Student.ID = Application.Student_ID
 and SizeHS < 10000 and major = 'Computer Science';
 
 
-
+--Another previously written query using the inner join
+select distinct ID, Student.name, College_Name, GPA,major, enrollment
+from Student join College join Application
+on Application.Student_ID = Student.ID and Application.College_Name = College.name order by GPA desc, enrollment;
 
 
 
