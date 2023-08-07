@@ -66,6 +66,17 @@ select ID,name, College_Name, major
 from Student left outer join Application using (ID);
 
 
+--Doing the above query by writing the left outer join in just using select,from, and where clauses
+
+select ID,name, College_Name, major
+from Student,Application
+where Student.ID = Application.Student_ID
+union
+select ID,name,NULL,NULL
+from Student
+where ID not in (select Student_ID from Application);
+
+
 
 
 
