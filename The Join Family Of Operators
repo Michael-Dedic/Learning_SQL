@@ -3,3 +3,10 @@
 Select distinct name, major
 from Student, Application
 where Student.ID = Application.Student_ID;
+
+
+
+--This code does the same as above except it uses the inner join(cross product) and then checks the condition.
+Select distinct name, major
+from Student inner join Application
+on Student.ID = Application.Student_ID;
