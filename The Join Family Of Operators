@@ -1,1 +1,5 @@
+--Previous code that uses a join that matches students names and their applications majors.
 
+Select distinct name, major
+from Student, Application
+where Student.ID = Application.Student_ID;
