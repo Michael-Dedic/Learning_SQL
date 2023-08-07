@@ -61,7 +61,9 @@ from Student S1 join Student S2 using(GPA)
 where S1.ID < S2.ID
 
 
-
+--This query also shows the students who have not applied to a College yet
+select ID,name, College_Name, major
+from Student left outer join Application using (ID);
 
 
 
