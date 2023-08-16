@@ -78,5 +78,21 @@ where ID not in (select Student_ID from Application);
 
 
 
+-- Full outer join in SQL
+--This shows students who do not have a matching application as well as application that do not have a matching student as well as just matching student and applications
+select name, ID, College_Name, major
+from Student, Application
+where Student.ID = Application.Student_ID
+union
+select name, ID, NULL, NULL
+from Student
+where ID not in (select Student_ID from Application)
+union
+select NULL, Student_ID, College_Name, major
+from Application
+where Student_ID not in (select ID from Student);
+
+
+
 
 
