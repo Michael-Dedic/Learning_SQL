@@ -32,3 +32,15 @@ from College
 where enrollment > 13000
 
 
+
+
+
+--This query shows the number of students who applied to Math
+
+select count(distinct Student_ID)
+from Application
+where major = 'Math'
+
+
+
+
