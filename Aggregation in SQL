@@ -2,3 +2,10 @@
 
 select avg(GPA)
 from Student;
+
+
+--Finds the min GPA of students whp applied for Engineering
+
+select min(GPA)
+from Student, Application
+where Student.ID = Application.Student_ID and major = 'Engineering'
