@@ -59,6 +59,14 @@ ID in (select Student_ID from Application where major = 'Engineering')) as Engin
 (select avg(GPA) as avgGPA from Student where
 ID not in (select Student_ID from Application where major = 'Engineering')) as NONEngineering
 
+--Another way to write the query above
+select distinct((select avg(GPA) as avgGPA from Student where
+ID in (select Student_ID from Application where major = 'Engineering')) -
+
+(select avg(GPA) as avgGPA from Student where
+ID not in (select Student_ID from Application where major = 'Engineering')) ) as GPA_Difference 
+from Student;
+
 
 
 
