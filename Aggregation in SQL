@@ -21,3 +21,14 @@ where Student.ID = Application.Student_ID and major = 'Engineering'
 select avg(GPA)
 from Student
 where ID in (select Student_ID from Application where major = 'Engineering')
+
+
+
+
+--This query shows the number of schools who have an enrollment greater than 13000
+
+select count(*)
+from College
+where enrollment > 13000
+
+
