@@ -1,1 +1,4 @@
+-- Finds the average GPA of the students
 
+select avg(GPA)
+from Student;
