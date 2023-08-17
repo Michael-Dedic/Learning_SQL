@@ -42,5 +42,12 @@ from Application
 where major = 'Math'
 
 
+--This query shows the number of students who applied to McMaster
+
+select count(distinct Student_ID)
+from Application
+where College_Name = 'McMaster'
+
+
 
 
