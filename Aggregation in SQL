@@ -50,4 +50,24 @@ where College_Name = 'McMaster'
 
 
 
+--This query determines the GPA difference between those who applied to engineering and those who haven't
+
+select Engineering.avgGPA - NonEngineering.avgGPA as GPA_Difference
+from (select avg(GPA) as avgGPA from Student where
+ID in (select Student_ID from Application where major = 'Engineering')) as Engineering,
+
+(select avg(GPA) as avgGPA from Student where
+ID not in (select Student_ID from Application where major = 'Engineering')) as NONEngineering
+
+
+
+
+
+
+
+
+
+
+
+
 
