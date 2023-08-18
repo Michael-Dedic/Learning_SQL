@@ -93,6 +93,15 @@ where Student.ID = Application.Student_ID
 group by College_Name, major
 
 
+--This query finds the largest GPA spread from the result of the previous query
+select max( Max_GPA - Min_GPA) as Largest_GPA_Spread
+from
+(select College_Name,major, max(GPA) as Max_GPA, min(GPA)as Min_GPA
+from Student, Application
+where Student.ID = Application.Student_ID
+group by College_Name, major) as M;
+
+
 
 
 
