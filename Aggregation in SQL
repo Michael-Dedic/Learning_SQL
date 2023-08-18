@@ -143,7 +143,13 @@ having count(distinct Student_ID) <5;
 
 
 
+--This query finds majors whose max GPA is less than the average GPA
 
+select major
+from Student, Application
+where Student.ID = Application.Student_ID
+group by major
+having max(GPA) <(select avg(GPA) from Student);
 
 
 
