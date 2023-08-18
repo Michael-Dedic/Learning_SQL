@@ -120,7 +120,12 @@ from Student
 where ID not in (select Student_ID from Application);
 
 
+--This query finds which Colleges which have less than 5 applications
 
+select College_Name
+from Application 
+group by College_Name
+having count(*) <5;
 
 
 
