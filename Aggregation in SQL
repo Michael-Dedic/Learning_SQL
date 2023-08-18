@@ -85,6 +85,13 @@ select state, sum(enrollment)
 from College
 group by state;
 
+--This query computes the max and min GPAs of applicants for each major and college
+
+select College_Name,major, max(GPA) as Max_GPA, min(GPA)as Min_GPA
+from Student, Application
+where Student.ID = Application.Student_ID
+group by College_Name, major
+
 
 
 
