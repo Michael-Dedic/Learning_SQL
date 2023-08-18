@@ -17,3 +17,11 @@ where GPA >3.5 or GPA<= 3.5;
 elect ID, name, GPA
 from Student
 where GPA >3.5 or GPA<= 3.5 or GPA is null;
+
+
+--In this query you will see Kevin as the sizeHS condition is met in the wherd clause for Kevin
+
+select ID, name, GPA, sizeHS
+from Student
+where GPA >3.5 or sizeHS <1600;
+
