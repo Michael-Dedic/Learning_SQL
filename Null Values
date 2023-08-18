@@ -25,3 +25,13 @@ select ID, name, GPA, sizeHS
 from Student
 where GPA >3.5 or sizeHS <1600;
 
+
+
+
+--This query determines the number of students that do not have a NULL GPA
+
+select count(*)
+from Student
+where GPA is not null;
+
+
