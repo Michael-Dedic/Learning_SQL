@@ -68,6 +68,17 @@ ID not in (select Student_ID from Application where major = 'Engineering')) ) as
 from Student;
 
 
+--This query selects the Colleges and how many applications there were for each College
+select College_Name, count(*)
+from Application
+group by College_Name
+
+--This query does the same thing as above except with no duplicate students
+select College_Name, count(distinct Student_ID) as Total
+from Application
+group by College_Name
+
+
 
 
 
