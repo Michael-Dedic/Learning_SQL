@@ -80,6 +80,12 @@ group by College_Name
 
 
 
+--This query shows the state and what their total enrollment is
+select state, sum(enrollment)
+from College
+group by state;
+
+
 
 
 
