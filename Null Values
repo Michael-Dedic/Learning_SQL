@@ -3,3 +3,10 @@
 insert into Student values (1130, 'Kevin', null,'Engineering', 1500);
 insert into Student values (1131, 'Lori', null, 'Engineering', 2500);
 
+--Notice in how the query below that Kevin and Lori do not show up. 
+--This is due to the fact that the NULL GPA does not satisfy either of the consitions even thought the statement query should show everybody.
+
+
+select ID, name, GPA
+from Student
+where GPA >3.5 or GPA<= 3.5;
