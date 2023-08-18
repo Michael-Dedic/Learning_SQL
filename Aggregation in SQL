@@ -108,7 +108,16 @@ from Student,Application
 where Student.ID = Application.Student_ID
 group by ID;
 
+--This query does the same as the above query while also including those students who have not applied for any programs.
 
+select ID, name, count(distinct College_Name) as Number_Of_Unique_Applications
+from Student,Application
+where Student.ID = Application.Student_ID
+group by ID
+union
+select ID, name, 0
+from Student
+where ID not in (select Student_ID from Application);
 
 
 
