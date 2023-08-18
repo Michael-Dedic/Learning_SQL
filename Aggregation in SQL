@@ -134,6 +134,14 @@ from Application A1
 where (select count(*) from Application A2 where A1.College_Name = A2.College_Name) <5;
 
 
+--This query shows how many Colleges have les than 5 unique students applying for a program
+
+select College_Name
+from Application 
+group by College_Name
+having count(distinct Student_ID) <5;
+
+
 
 
 
