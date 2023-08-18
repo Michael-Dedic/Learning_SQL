@@ -127,6 +127,13 @@ from Application
 group by College_Name
 having count(*) <5;
 
+--This query accomplishes the same task as the previous query except we are not using the group by or having clauses
+
+select distinct College_Name
+from Application A1
+where (select count(*) from Application A2 where A1.College_Name = A2.College_Name) <5;
+
+
 
 
 
