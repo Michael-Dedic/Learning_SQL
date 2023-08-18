@@ -35,3 +35,11 @@ from Student
 where GPA is not null;
 
 
+--Similarly, this query shows the number of students with NULL GPA
+
+
+select count(*)
+from Student
+where GPA is null;
+
+
