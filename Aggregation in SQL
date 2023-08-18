@@ -102,6 +102,13 @@ where Student.ID = Application.Student_ID
 group by College_Name, major) as M;
 
 
+--This query shows all the students who have applications and how many unique applications they have done
+select ID, name, count(distinct College_Name) as Number_Of_Unique_Applications
+from Student,Application
+where Student.ID = Application.Student_ID
+group by ID;
+
+
 
 
 
