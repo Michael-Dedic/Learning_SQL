@@ -1,1 +1,5 @@
+-- Note-> Use these 2 intserted rows for the Student Table to perform some queries with Null values
+
+insert into Student values (1130, 'Kevin', null,'Engineering', 1500);
+insert into Student values (1131, 'Lori', null, 'Engineering', 2500);
 
