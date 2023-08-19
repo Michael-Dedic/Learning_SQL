@@ -16,3 +16,12 @@ insert into Application
 select ID, 'Queens',  'Engineering', 'Y'
 from Student
 where ID in (select Student_ID from Application where major = 'Engineering' and decision = 'N');
+
+--This query finds students who have applied to more than 2 programs and deletes them from the Student Table
+
+delete from Student
+where ID in
+(select Student_ID
+from Application
+group by Student_ID
+having count(distinct major) >2);
