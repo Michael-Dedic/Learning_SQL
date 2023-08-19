@@ -25,3 +25,10 @@ where ID in
 from Application
 group by Student_ID
 having count(distinct major) >2);
+
+--This query deletes all of the Colleges that do not have an Engineering applicant
+
+delete from College
+where name not in (select College_Name from Application where major = 'Engineering');
+
+
