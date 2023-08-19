@@ -1,3 +1,10 @@
 --This is just a standard insert values query
 
 insert into College values ('Queens', 'ON', 12000);
+
+--This query finds the students who have not applied to any program and make it so that they are applying to Queens for Engineering
+
+insert into Application
+select ID, 'Queens',  'Engineering', Null
+from Student
+where ID not in (select Student_ID from Application);
