@@ -1,1 +1,3 @@
+--This is just a standard insert values query
 
+insert into College values ('Queens', 'ON', 12000);
