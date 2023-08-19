@@ -8,3 +8,11 @@ insert into Application
 select ID, 'Queens',  'Engineering', Null
 from Student
 where ID not in (select Student_ID from Application);
+
+
+--This query takes all of the students who applied to Engineering and got rejected and gives them a successful application to Queens Engineering
+
+insert into Application
+select ID, 'Queens',  'Engineering', 'Y'
+from Student
+where ID in (select Student_ID from Application where major = 'Engineering' and decision = 'N');
