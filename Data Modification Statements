@@ -40,3 +40,15 @@ set decision = 'Y',  major = 'Economics'
 where College_Name = 'Queens' and  Student_ID in (select ID from Student where GPA<3.6);
 
 
+--This query turns the highest GPA engineering student into a computer science major
+
+update Application
+set major = 'Computer Science'
+where major = 'Engineering'
+  and Student_ID in
+    (select ID from Student
+     where GPA >= all
+        (select GPA from Student
+         where ID in (select Student_ID from Application where major = 'Engineering')));
+
+
