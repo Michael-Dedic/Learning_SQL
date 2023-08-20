@@ -32,3 +32,11 @@ delete from College
 where name not in (select College_Name from Application where major = 'Engineering');
 
 
+--This query finds students who applied to Queens and have a GPA<3.6 , but converts them to economics majors
+
+
+Update Application
+set decision = 'Y',  major = 'Economics'
+where College_Name = 'Queens' and  Student_ID in (select ID from Student where GPA<3.6);
+
+
