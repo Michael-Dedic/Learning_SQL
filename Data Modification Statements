@@ -52,3 +52,12 @@ where major = 'Engineering'
          where ID in (select Student_ID from Application where major = 'Engineering')));
 
 
+
+--This query gives everybody the max GPA and smallest highest values
+
+
+update Student
+set GPA = (select max(GPA) from Student),
+sizeHS = (select min(sizeHS) from Student)
+
+
